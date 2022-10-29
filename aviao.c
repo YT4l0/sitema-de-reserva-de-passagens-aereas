@@ -11,34 +11,18 @@ typedef struct aviao
     char destino;
 }Aviao;
 
-//criando uma função para iniciar
-void inicializa(Aviao **avioes, int n)
+//criando uma estrutura para lista
+typedef struct lista
 {
-    int i;
-    for(i = 0; i < n; i++)
-    avioes[i] = NULL;
+    Aviao info;
+
+    struct list*prox; //criando um nó
+
+
 }
-void origem(int n, Aviao** avioes)
+
+//criando uma função para criar a lista
+lista*cria(int numero, char origem, char destino, lista*l)
 {
-    static i = 0;
-
-    if(i<n){
-        avioes[i] = (Aviao *) malloc(n * sizeof(Aviao)); 
-        if(avioes[i]==NULL){
-                        printf("Memoria cheia \n");
-                        exit(1);
-                }
-
-    else
-    {
-        printf("Origem do aviao:\n numero do aviao:\n destino do aviao:\n");
-        scanf("%s", &avioes[i]->origem);
-        scanf("%d", &avioes[i]->numero);
-        scanf("%s", &avioes[i]->destino);
-       
-    }
-
-    }
-    
-
+    lista *novo =(lista*)malloc(sizeof(lista));
 }
