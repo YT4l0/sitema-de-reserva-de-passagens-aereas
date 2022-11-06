@@ -53,6 +53,14 @@ Passagem* reserva_passagem(void){
 
 
     Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
+
+    FILE* arquivo;
+    arquivo = fopen(entrada_passagens.txt);
+    if(arquivo ==NULL){
+        printf("Erro ao abrir o arquivo: ");
+        exit(1);
+    }
+
     printf("digite o nome:  ");
     scanf(" %[^\n]", passagem->nome);
     printf("\n");
@@ -68,6 +76,10 @@ Passagem* reserva_passagem(void){
     printf("digite o numero do aviao:");
     scanf(" %d", &passagem->numero_aviao);
     printf("\n");
+
+    fprintf(arquivo, %s %s %s %d, passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao);
+
+    fclose(arquivo):
 
     return passagem;
 }
