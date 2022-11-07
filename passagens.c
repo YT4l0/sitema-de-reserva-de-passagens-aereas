@@ -14,48 +14,17 @@ struct passagem{
 
 };
 
-struct No{
-
-    Passagem info;
-
-    no *next; //proximo elemento
-    no  *prior; //elemento anterior
-
-};
-struct Lista{
-
-    Passagem info;
-
-    lista *next;
-    lista *prior; 
-
-}lista;
-
-lista* lista_insere(lista *l, int i){
-    lista *new =(lista*)malloc(sizeof(lista));
-    if(new==NULL){
-        printf("sem espaço");
-        exit(1)
-    }
-
-    new-> info = i;
-    new -> next = l;
-    next -> prior = l;
-
-
-
-return new;
-}
-
 Passagem* reserva_passagem(void){
-
-
-
 
     Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
 
     FILE* arquivo;
-    arquivo = fopen(entrada_passagens.txt);
+    char entradaPassagem[50];
+
+    printf("Digite o nome do arquivo: ");
+    scanf(" %[^\n]", entradaPassagem);
+
+    arquivo = fopen(entradaPassagem, "w");
     if(arquivo ==NULL){
         printf("Erro ao abrir o arquivo: ");
         exit(1);

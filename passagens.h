@@ -5,9 +5,7 @@
 
 typedef struct passagem Passagem; //renomeando a strutura
 
-typedef struct No no;
 
-typedef struct Lista lista;
 
 // renomeando a estrutura
 
