@@ -9,9 +9,11 @@ struct passagem{
     char destino[50];
     int numero_aviao;
 
-    
+};
 
-
+struct lista {
+    Passagem* info;
+    struct lista* next;
 };
 
 
@@ -43,16 +45,27 @@ Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
    
 
    
-    FILE* arquivo = fopen("entradaPassagem.txt", "a");
-    if(arquivo ==NULL){
-        printf("Erro ao abrir o arquivo: ");
-        exit(1);
+    FILE* arquivo = fopen("entradaPassagem.txt", "a"); //criando um arquivo
+    if(arquivo ==NULL){  //compararando para ver se o arquivo é nulo
+        printf("Erro ao abrir o arquivo: "); // caso arquivo seja nulo eexibe ao usuario erro
+        exit(1); //abortando o proganma
     }
 
-    fprintf(arquivo, "Nome: %s\nOrigem: %s\nDestino %s\n Numero do aviao: %d\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao);
+    fprintf(arquivo, "Nome: %s\nOrigem: %s\nDestino %s\nNumero do aviao: %d\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); //salvando os dados do usuario dentro do arquivo
 
-    fclose(arquivo);
+    fclose(arquivo); //fechando o arquivo
 
-    return passagem;
+    return passagem; //retornando passagem
 }
+
+/*
+void imprime_passagem(Passagem *passagem){ //função para imprimir os dados fornecidos pelo usuario
+
+    printf("Nome: %s\nOrigem: %s\nDestino %s\nNumero do aviao: %d\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao);
+
+
+}
+
+*/
+
 

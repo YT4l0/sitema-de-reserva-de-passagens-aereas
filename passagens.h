@@ -10,6 +10,7 @@ typedef struct passagem Passagem; //renomeando a strutura
 // renomeando a estrutura
 
 Passagem* reserva_passagem(void); //criando uma função que faz uma reserva da passagem
+void imprime_passagem(Passagem *passagem); //criando criando uma função para imprimir os dados salvos
 
 
 
