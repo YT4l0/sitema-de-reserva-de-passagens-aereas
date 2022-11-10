@@ -13,23 +13,15 @@ struct passagem{
 
 struct lista {
     Passagem* info;
-    struct lista* next;
+    struct lista* prox;
 };
 
-typedef struct {
-  struct no *inicio;
-}lista;
-
-
-
-
+Lista* lista_cria(){
+    return NULL;
+}
 
 Passagem* reserva_passagem(void){
-
-Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
-
-    
-
+    Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
     printf("digite o nome:  ");
     scanf(" %[^\n]", passagem->nome);
     printf("\n");
@@ -46,30 +38,27 @@ Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
     scanf(" %d", &passagem->numero_aviao);
     printf("\n");
 
-   
-
-   
-
-   
     FILE* arquivo = fopen("entradaPassagem.txt", "a"); //criando um arquivo
     if(arquivo ==NULL){  //compararando para ver se o arquivo é nulo
         printf("Erro ao abrir o arquivo: "); // caso arquivo seja nulo eexibe ao usuario erro
         exit(1); //abortando o proganma
     }
 
-    fprintf(arquivo, "Nome: %s\nOrigem: %s\nDestino %s\nNumero do aviao: %d\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); //salvando os dados do usuario dentro do arquivo
+    
+    fprintf(arquivo, "Nome: %s\nOrigem: %s\nDestino: %s\nNumero do aviao: %d\n\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); //salvando os dados do usuario dentro do arquivo
 
     fclose(arquivo); //fechando o arquivo
 
     return passagem; //retornando passagem
 }
 
+
 /*
-void imprime_passagem(Passagem *passagem){ //função para imprimir os dados fornecidos pelo usuario
+void imprime_passagem(Passagem* passagem){ //função para imprimir os dados fornecidos pelo usuario
 
     printf("Nome: %s\nOrigem: %s\nDestino %s\nNumero do aviao: %d\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao);
 
-
+    
 }
 
 */
