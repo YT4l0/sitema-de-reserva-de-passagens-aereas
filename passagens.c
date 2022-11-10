@@ -16,25 +16,7 @@ struct lista {
     Passagem* info;
     struct lista* prox;
 }; 
-/*
-Lista *buscar_passagem(Lista *pLista, Passagem* info){
 
-    while(pLista != (Lista *) NULL){
-        if(pLista -> == info){
-            return(pLista);
-
-        }else{
-            pLista = pLista -> prox;
-
-        }
-
-    }
-    return(Lista *) NULL
-
-
-}
-
-*/
 
 Passagem* reserva_passagem(void){
     Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
@@ -71,4 +53,26 @@ Passagem* reserva_passagem(void){
 
 
 
+Lista* inserir_passagem(Lista* lista_passagem, Passagem * nome){
 
+    Lista* new_passagem = (Lista*)malloc(sizeof(Lista));
+    new_passagem->info = nome;
+    new_passagem->prox = lista_passagem;
+    return new_passagem;
+}
+
+/*
+void lst_listar(Lista* lista_passagem){
+    Lista*contador;
+    for(contador=lista_passagem; contador! = NULL; contador=contador->prox){
+        printf("", contador->info, );
+    }
+}
+*/
+
+
+/*
+void exibe_passagem(Passagem* lista_passagem){
+    printf("Nome: %s\nOrigem: %s\nDestino: %s\nNumero do aviao: %d\n\n", lista_passagem->nome, lista_passagem->origem, lista_passagem->destino, passagem->numero_aviao);
+}
+*/

@@ -85,7 +85,7 @@ void ApresentaMenu(int nItens, int menorOpcao, ...) {
 
 int main(void) {
     unsigned char op;
-
+    Lista* lista_passagem = NULL;
     
     unsigned int saida = 0;
 
@@ -98,6 +98,7 @@ int main(void) {
             case OPCAO1:
                 Beep(1000,500); /* Emite um beep */
                 Passagem*passagem = reserva_passagem();
+                Lista * lista_de_passagem = inserir_passagem(lista_passagem, passagem);
                 
                 break;
 
@@ -108,7 +109,9 @@ int main(void) {
                 break;
 
             case OPCAO3:
-             Beep(1000,500);
+                Beep(1000,500);
+                Passagem* imprime_l =  exibe_passagem();
+             
              
                
                 break;
