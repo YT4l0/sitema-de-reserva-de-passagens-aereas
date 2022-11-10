@@ -3,6 +3,7 @@
 
 
 
+
 //criando uma estrutura do tipo avião
 typedef struct aviao
 {
@@ -14,17 +15,5 @@ typedef struct aviao
 }Aviao;
 
 //criando uma estrutura para lista
-typedef struct lista
-{
-    Aviao info;
-
-    struct list*prox; //criando um nó
-
-
-}
-
-//criando uma função para criar a lista
-lista*cria(int numero, char origem, char destino, lista*l)
-{
-    lista *novo =(lista*)malloc(sizeof(lista));
-}
+Aviao* aviao_cria();
+    
