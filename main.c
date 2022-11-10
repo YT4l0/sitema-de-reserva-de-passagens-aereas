@@ -107,7 +107,7 @@ int main(void) {
                 break;
 
             case OPCAO3:
-            // Passagem*imprime = imprime_passagem();
+             Passagem*imprime =  lst_imprime(Lista*l)
                 Beep(1000,500);
                
                 break;

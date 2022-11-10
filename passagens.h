@@ -7,7 +7,15 @@ typedef struct passagem Passagem; //renomeando a strutura
 
 typedef struct lista Lista;
 
-Lista* lista_cria();
+Lista* lista_cria(); //criando uma lista
+
+void lst_imprime(Lista*l); //imprime lista
+
+Lista* lst_insere(Lista* l, Passagem p); //inserindo novo elemento
+
+Lista * lst_retira(Lista*l, Passagem p); //retirando elemento
+
+
 
 // renomeando a estrutura
 
