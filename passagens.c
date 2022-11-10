@@ -16,6 +16,12 @@ struct lista {
     struct lista* next;
 };
 
+typedef struct {
+  struct no *inicio;
+}lista;
+
+
+
 
 
 Passagem* reserva_passagem(void){
