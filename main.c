@@ -103,18 +103,19 @@ int main(void) {
 
             case OPCAO2:
                 Beep(1000,500);
-                //add funtion clear
+              
+          
                 break;
 
             case OPCAO3:
-             Passagem*imprime =  lst_imprime(Lista*l)
-                Beep(1000,500);
+             Beep(1000,500);
+             
                
                 break;
 
             case OPCAO4:
                 Beep(1000,500);
-               
+             ;
                 break;
 
             case OPCAO5:
