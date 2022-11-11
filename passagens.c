@@ -62,18 +62,33 @@ Lista* inserir_passagem(Lista* lista_passagem, Passagem * nome){
 }
 
 
-/*
+
+
 void lst_listar(Lista* lista_passagem){
     Lista*contador;
-    for(contador=lista_passagem; contador! = NULL; contador=contador->prox){
-        printf("", contador->info, );
+    for(contador=lista_passagem; contador!=NULL; contador=contador->prox){
+        exibe_passagem(contador->info);
+       
     }
 }
-*/
 
 
-/*
+
+
 void exibe_passagem(Passagem* lista_passagem){
-    printf("Nome: %s\nOrigem: %s\nDestino: %s\nNumero do aviao: %d\n\n", lista_passagem->nome, lista_passagem->origem, lista_passagem->destino, passagem->numero_aviao);
+    printf("Nome: %s\nOrigem: %s\nDestino: %s\nNumero do aviao: %d\n\n", lista_passagem->nome, lista_passagem->origem, lista_passagem->destino, lista_passagem->numero_aviao);
 }
-*/
+
+
+Lista * lst_busca(char *nome_buscado, Lista* lista_passagem){
+	Lista * aux;
+	for(aux=lista_passagem; aux!=NULL; aux=aux->prox){
+		if(aux->info->nome ==elemento)
+			return aux;
+	}
+
+	return NULL;
+
+}
+
+
