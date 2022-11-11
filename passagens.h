@@ -14,8 +14,12 @@ Passagem* reserva_passagem(void); //criando uma função que faz uma reserva da 
 
 Lista* inserir_passagem(Lista* lista_passagem, Passagem* nome);
 
+Lista * lst_busca(int elemento, Lista* lista_passagem);
+
+void exibe_passagem(Passagem* lista_passagem);
+
 void lst_listar(Lista* lista_passagem);
 
-void exibe_passagem(Lista* lista_passagem);
+
 
 #endif

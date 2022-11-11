@@ -98,7 +98,7 @@ int main(void) {
             case OPCAO1:
                 Beep(1000,500); /* Emite um beep */
                 Passagem*passagem = reserva_passagem();
-                Lista * lista_de_passagem = inserir_passagem(lista_passagem, passagem);
+                lista_passagem = inserir_passagem(lista_passagem, passagem);
                 
                 break;
 
@@ -110,15 +110,19 @@ int main(void) {
 
             case OPCAO3:
                 Beep(1000,500);
-                /*
-                Passagem* imprime_l =  exibe_passagem();
-                */
+
+            
+                
+                lst_listar(lista_passagem);
+                
              
                
                 break;
 
             case OPCAO4:
                 Beep(1000,500);
+
+               // Lista_de_passagem = lst_busca(int elemento, Lista* lista_passagem)
              
                 break;
 
