@@ -20,6 +20,8 @@ void exibe_passagem(Passagem* lista_passagem);
 
 void lst_listar(Lista* lista_passagem);
 
+Lista * lst_busca(char *nome_buscado, Lista* lista_passagem);
+
 
 
 #endif
