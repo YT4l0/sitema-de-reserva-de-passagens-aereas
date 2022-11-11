@@ -12,4 +12,10 @@ Lista* lista_cria(); //criando uma lista
 
 Passagem* reserva_passagem(void); //criando uma função que faz uma reserva da passagem
 
+Lista* inserir_passagem(Lista* lista_passagem, Passagem* nome);
+
+void lst_listar(Lista* lista_passagem);
+
+void exibe_passagem(Lista* lista_passagem);
+
 #endif

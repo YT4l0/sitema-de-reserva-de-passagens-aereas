@@ -110,15 +110,16 @@ int main(void) {
 
             case OPCAO3:
                 Beep(1000,500);
+                /*
                 Passagem* imprime_l =  exibe_passagem();
-             
+                */
              
                
                 break;
 
             case OPCAO4:
                 Beep(1000,500);
-             ;
+             
                 break;
 
             case OPCAO5:
