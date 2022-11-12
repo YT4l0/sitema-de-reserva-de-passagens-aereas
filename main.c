@@ -104,6 +104,8 @@ int main(void) {
 
             case OPCAO2:
                 Beep(1000,500);
+
+                //clear de informations of pass
               
           
                 break;
@@ -122,16 +124,20 @@ int main(void) {
             case OPCAO4:
                 Beep(1000,500);
 
-               // Lista_de_passagem = lst_busca(int elemento, Lista* lista_passagem)
-             
+               lista_passagem = lst_busca(lista_passagem, passagem);
+
                 break;
 
             case OPCAO5:
                 Beep(1000,500);
 
+                //checking vagas opens
+
                 break;
             case OPCAO6:
             Beep(1000,500);
+
+            //cheking number of passageiros
 
             break;
 

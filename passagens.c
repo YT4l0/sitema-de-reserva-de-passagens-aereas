@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "passagens.h"
 
+/* criar a struct passagem */
+
 struct passagem{
 
     char nome[50];
@@ -11,12 +13,15 @@ struct passagem{
 
 };
 
+/*função para criar a lista*/
 
 struct lista {
     Passagem* info;
     struct lista* prox;
 }; 
 
+/*função que pede ao usuario as infos
+da passagem*/
 
 Passagem* reserva_passagem(void){
     Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
@@ -51,7 +56,7 @@ Passagem* reserva_passagem(void){
 }
 
 
-
+/*função para iserir a passagem dentro dos nos e assim criar a lista*/
 
 Lista* inserir_passagem(Lista* lista_passagem, Passagem * nome){
 
@@ -61,21 +66,24 @@ Lista* inserir_passagem(Lista* lista_passagem, Passagem * nome){
     return new_passagem;
 }
 
-
-
-
+/*função para o contador percorrer a todos os nos da lista e passar a info como pararametro para exibir
+a lista*/
 void lst_listar(Lista* lista_passagem){
     Lista*contador;
     for(contador=lista_passagem; contador!=NULL; contador=contador->prox){
+        printf("----passagem----\n");
+
         exibe_passagem(contador->info);
+        
+        printf("----------------\n");
        
     }
 }
 
 
+/* função para exibir os elementos da passagem */
 
-
-void exibe_passagem(Passagem* lista_passagem){
+void exibe_passagem(Passagem* lista_passagem){ 
     printf("Nome: %s\nOrigem: %s\nDestino: %s\nNumero do aviao: %d\n\n", lista_passagem->nome, lista_passagem->origem, lista_passagem->destino, lista_passagem->numero_aviao);
 }
 
@@ -83,12 +91,16 @@ void exibe_passagem(Passagem* lista_passagem){
 Lista * lst_busca(char *nome_buscado, Lista* lista_passagem){
 	Lista * aux;
 	for(aux=lista_passagem; aux!=NULL; aux=aux->prox){
-		if(aux->info->nome ==elemento)
+
+		if (strcmp(aux->info->nome, nome_buscado)==0);
+
 			return aux;
 	}
 
 	return NULL;
 
 }
+
+
 
 
