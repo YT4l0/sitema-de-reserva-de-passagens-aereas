@@ -99,6 +99,7 @@ int main(void) {
                 Beep(1000,500); /* Emite um beep */
                 Passagem*passagem = reserva_passagem();
                 lista_passagem = inserir_passagem(lista_passagem, passagem);
+                 
                 
                 break;
 
@@ -116,6 +117,7 @@ int main(void) {
             
                 
                 lst_listar(lista_passagem);
+               // exibe_exibe_arquivo(lista_passagem);
                 
              
                

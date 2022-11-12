@@ -102,5 +102,26 @@ Lista * lst_busca(char *nome_buscado, Lista* lista_passagem){
 }
 
 
+/*
+
+void exibe_exibe_arquivo(Lista *lista_passagem){
+
+     Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
+
+     FILE* arquivo = fopen("entradaPassagem.txt", "r");
+      if(arquivo ==NULL){  //compararando para ver se o arquivo é nulo
+        printf("Erro ao abrir o arquivo: "); // caso arquivo seja nulo eexibe ao usuario erro
+        exit(1); //abortando o proganma
+    }
+
+     while(fgets(arquivo,10000,entradaPassagem.txt) != NULL){
+        sscanf(arquivo, "Nome: %s\nOrigem: %s\nDestino: %s\nNumero do aviao: %d\n\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); //salvando os dados do usuario dentro do arquivo
+     }
+
+}
+
+*/
+
+
 
 
