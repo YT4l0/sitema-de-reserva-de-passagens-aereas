@@ -106,6 +106,8 @@ int main(void) {
             case OPCAO2:
                 Beep(1000,500);
 
+                // lst_retira(lista_passagem, passagem->nome);
+
                 //clear de informations of pass
               
           

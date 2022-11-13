@@ -23,6 +23,8 @@ Lista * lst_busca(char *nome_buscado, Lista* lista_passagem);
 
 void exibe_exibe_arquivo(Lista *lista_passagem);
 
+Lista * lst_retira(Lista* lista_passagem, char name);
+
 
 
 #endif

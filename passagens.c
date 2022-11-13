@@ -89,7 +89,9 @@ void exibe_passagem(Passagem* lista_passagem){
 
 
 Lista * lst_busca(char *nome_buscado, Lista* lista_passagem){
+
 	Lista * aux;
+    
 	for(aux=lista_passagem; aux!=NULL; aux=aux->prox){
 
 		if (strcmp(aux->info->nome, nome_buscado)==0);
@@ -98,6 +100,7 @@ Lista * lst_busca(char *nome_buscado, Lista* lista_passagem){
 	}
 
 	return NULL;
+    
 
 }
 
@@ -121,6 +124,32 @@ void exibe_exibe_arquivo(Lista *lista_passagem){
 }
 
 */
+
+/*
+Lista * lst_retira(Lista* lista_passagem, char name){
+    Lista* ant = NULL; /* ponteiro para elemento anterior */
+    Lista* p = l; /* ponteiro para percorrer a lista*/
+    /* procura elemento na lista, guardando anterior */
+    while(p->info!=name){
+    	if (p==NULL)
+        	return lista_passagem; /* n�o achou: retorna lista original */
+        ant = p;
+        p = p->prox;
+            /* verifica se achou elemento */
+
+    }
+    /* retira elemento */
+    if (ant==NULL)
+    /* retira elemento do inicio */
+        lista_passagem = p->prox;
+    else
+    /* retira elemento do meio da lista */
+        ant->prox = p->prox;
+    free(p);
+    return lista_passagem;;
+}
+*/
+
 
 
 
