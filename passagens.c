@@ -92,6 +92,7 @@ Lista * lst_busca(Lista* lista_passagem){
 
     char nome_buscado[50];
 
+  
     printf("Nome que deseja buscar?\n");
     scanf("%[^\n]", nome_buscado);
 
@@ -101,13 +102,16 @@ Lista * lst_busca(Lista* lista_passagem){
 
 		if (strcmp(aux->info->nome, nome_buscado)==0){
 
-            printf("o nome buscado: \n%s\n", nome_buscado);
+            printf("o nome buscado: \n%s foi encontrado!\n\n", nome_buscado);
+              printf("----------------\n");
             
 
 			return aux;
         }
 	}
 
+    printf("o nome buscado nao foi encontrado!\n\n");
+      printf("----------------\n");
 	return NULL;
 
 }
