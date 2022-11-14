@@ -89,9 +89,11 @@ void exibe_passagem(Passagem* lista_passagem){
 
 
 Lista * lst_busca(char *nome_buscado, Lista* lista_passagem){
+    
 	Lista * aux;
 	for(aux=lista_passagem; aux!=NULL; aux=aux->prox){
-
+        printf("Nome que deseja buscar?\n");
+        scanf("%[^\n]", nome_buscado);
 		if (strcmp(aux->info->nome, nome_buscado)==0);
 
 			return aux;

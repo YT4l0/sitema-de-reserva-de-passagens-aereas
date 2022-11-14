@@ -123,9 +123,11 @@ int main(void) {
 
             case OPCAO4:
                 Beep(1000,500);
+                char nome_pesquisado;
+            
 
-               lista_passagem = lst_busca(lista_passagem, passagem);
-
+                lista_passagem = lst_busca(nome_pesquisado, lista_passagem );
+                
                 break;
 
             case OPCAO5:
