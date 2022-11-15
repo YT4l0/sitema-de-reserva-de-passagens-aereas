@@ -37,7 +37,7 @@ Passagem* reserva_passagem(void){
     scanf(" %[^\n]", passagem->destino);
     printf("\n");
 
-    printf("digite o numero do aviao:");
+    printf("digite o numero do aviao: ");
     scanf(" %d", &passagem->numero_aviao);
     printf("\n");
 
@@ -89,29 +89,32 @@ void exibe_passagem(Passagem* lista_passagem){
 
 
 Lista * lst_busca(Lista* lista_passagem){
-
+    FILE *arquivo1 = fopen("./entradaPassagem.txt", "r");
     char nome_buscado[50];
-
+    Passagem *Lista_passagem1;
   
     printf("Nome que deseja buscar?\n");
-    scanf("%[^\n]", nome_buscado);
-
+    fscanf(arquivo1, "%[^\n]", nome_buscado);
+    
     
 	Lista * aux;
 	for(aux=lista_passagem; aux!=NULL; aux=aux->prox){
 
 		if (strcmp(aux->info->nome, nome_buscado)==0){
 
-            printf("o nome buscado: \n%s foi encontrado!\n\n", nome_buscado);
-              printf("----------------\n");
+
             
 
 			return aux;
         }
 	}
-
+            printf("o nome buscado %s foi encontrado!\n\n", nome_buscado);
+            printf("Passagem de %s:\nOrigem: %s\nDestino: \nNumero doa aviao: ", nome_buscado, Lista_passagem1->origem, Lista_passagem1->destino, Lista_passagem1->numero_aviao);
+            printf("\n----------------\n");
     printf("o nome buscado nao foi encontrado!\n\n");
-      printf("----------------\n");
+    printf("----------------\n");
+    fclose(arquivo1);
+
 	return NULL;
 
 }

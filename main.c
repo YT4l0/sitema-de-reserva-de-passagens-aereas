@@ -65,7 +65,7 @@ int LeOpcao(int menorValor, int maiorValor) {
 * Função: ApresentaMenu
 * Descrição: Apresenta menu com número indeterminado de opções
 * Parâmetros:
-*   nItens (entrada): número de itens no menu
+*   nItens (entrada): número de itens no menu7777 
 *   menorOpcao (entrada): caractere associado ao item I
 * Retorno: Nada
 ****/
