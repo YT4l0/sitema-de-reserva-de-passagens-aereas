@@ -21,6 +21,8 @@ void lst_listar(Lista* lista_passagem);
 
 Lista * lst_busca(Lista* lista_passagem);
 
-
+/*
+Lista* ler_arquivo(void);
+*/
 
 #endif

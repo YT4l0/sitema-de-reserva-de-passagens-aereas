@@ -85,7 +85,7 @@ void ApresentaMenu(int nItens, int menorOpcao, ...) {
 
 int main(void) {
     unsigned char op;
-    Lista* lista_passagem = NULL; //criar funcao para ler os dados do arquivo e preencher a lista {lera_arquivo(void)}
+    Lista* lista_passagem = NULL; //criar funcao para ler os dados do arquivo e preencher a lista {ler_arquivo(void)}
     
     unsigned int saida = 0;
 

@@ -118,6 +118,28 @@ Lista * lst_busca(Lista* lista_passagem){
 	return NULL;
 
 }
+/*
+Lista* ler_arquivo(void){
+    char linha[100];
+    FILE* arq;
+
+
+    arq = fopen("entrada_lista1_ex2.txt", "rt");
+    if (arq == NULL) {
+        printf("Não encontrado\n");
+        exit(1);
+    }
+
+ // Ler os dados do arquivo de entrada 
+    while (fgets(linha,100,arq) != NULL){
+        // Passando os dados do vetor linha para o vetor v
+        sscanf(linha, "%d ", &v[n]);
+        
+        n++;
+    }
+    return linha;
+}
+*/
 
 
 
