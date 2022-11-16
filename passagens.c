@@ -108,9 +108,9 @@ Lista * lst_busca(Lista* lista_passagem){
 			return aux;
         }
 	}
-            printf("o nome buscado %s foi encontrado!\n\n", nome_buscado);
-            printf("Passagem de %s:\nOrigem: %s\nDestino: \nNumero doa aviao: ", nome_buscado, Lista_passagem1->origem, Lista_passagem1->destino, Lista_passagem1->numero_aviao);
-            printf("\n----------------\n");
+    printf("o nome buscado %s foi encontrado!\n\n", nome_buscado);
+    printf("Passagem de %s:\nOrigem: %s\nDestino: \nNumero doa aviao: ", nome_buscado, Lista_passagem1->origem, Lista_passagem1->destino, Lista_passagem1->numero_aviao);
+    printf("\n----------------\n");
     printf("o nome buscado nao foi encontrado!\n\n");
     printf("----------------\n");
     fclose(arquivo1);
