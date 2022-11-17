@@ -67,8 +67,8 @@ Lista * lst_retira(Lista*l){
     scanf("%[^\n]", name);
 
 
-    while(strcmp(p->info->nome, name)==0){
-
+    while(strcmp(p->info->nome, name)!=0){
+        
     	if (p==NULL)
         	return l; /* n�o achou: retorna lista original */
         ant = p;
@@ -84,15 +84,11 @@ Lista * lst_retira(Lista*l){
     /* retira elemento do meio da lista */
         ant->prox = p->prox;
 
-        
+        printf("\n==== nome removido com sucesso =====\n");
+
     free(p);
-
-    printf("==== nome removido com sucesso =====");
-
-
     return l;
 }
-
 
 /*função para iserir a passagem dentro dos nos e assim criar a lista*/
 
