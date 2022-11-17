@@ -1,36 +1,12 @@
-Thiago
-Sao Miguel
-Pau Dos Ferros
-11
-Luan
-sp
-rj
-22
-wesley
-sp
-mg
-3
-kkk
-ff
-dd
-6
-Ytalo
-Rj
-Sp
+Cristiano Ronaldo
+Portugal
+Qatar
+54
+Maria
+Pau dos Ferros
+Pereiro
 1
-h
-y
-h
-1952531570
-Joao
-Minas
-ceara
-1
-k
-k
-k
-4
-Alice
+thiago
 Ceara
-Natal
-23
+Paraiba
+32

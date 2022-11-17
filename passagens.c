@@ -118,6 +118,27 @@ Lista * lst_busca(Lista* lista_passagem){
 	return NULL;
 
 }
+
+/*
+void ler_arquivo(void){
+
+    Passagem *lerArquivo;
+
+    FILE *arq = fopen("entradaPassagem.txt" , "r");
+    if(arq == NULL){
+        printf("Erro ao abrir o arquivo");
+        exit(1);
+    }
+
+    while(fscanf(arq, "%[^\n] %[^\n] %[^\n] %d ", lerArquivo->nome, lerArquivo->origem, lerArquivo->destino, lerArquivo->numero_aviao) != EOF){
+        printf("Nome: %[^\n]\n Origem: %[^\n] Destino: %[^\n]\n Numero do aviao: %d ", lerArquivo->nome, lerArquivo->origem, lerArquivo->destino, lerArquivo->numero_aviao);
+    }
+
+    fclose(arq);
+
+}
+*/
+
 /*
 Lista* ler_arquivo(void){
     char linha[100];
