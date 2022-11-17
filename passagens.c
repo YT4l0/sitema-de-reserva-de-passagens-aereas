@@ -174,7 +174,7 @@ void ler_arquivo(void){
 }
 */
 
-/*
+
 Lista* ler_arquivo(void){
     char linha[100];
     FILE* arq;
@@ -195,7 +195,7 @@ Lista* ler_arquivo(void){
     }
     return linha;
 }
-*/
+
 
 
 
