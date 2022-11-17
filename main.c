@@ -106,6 +106,8 @@ int main(void) {
                 Beep(1000,500);
 
                 //clear de informations of pass
+
+               lista_passagem = lst_retira(lista_passagem);
               
           
                 break;

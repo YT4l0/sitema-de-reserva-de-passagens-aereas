@@ -56,6 +56,44 @@ Passagem* reserva_passagem(void){
 }
 
 
+Lista * lst_retira(Lista*l){
+
+    char name[50];
+    Lista* ant = NULL; /* ponteiro para elemento anterior */
+    Lista* p = l; /* ponteiro para percorrer a lista*/
+    /* procura elemento na lista, guardando anterior */
+
+    printf("\ndigite o nome do passageiro a ser removido: \n");
+    scanf("%[^\n]", name);
+
+
+    while(strcmp(p->info->nome, name)==0){
+
+    	if (p==NULL)
+        	return l; /* n�o achou: retorna lista original */
+        ant = p;
+        p = p->prox;
+            /* verifica se achou elemento */
+
+    }
+    /* retira elemento */
+    if (ant==NULL)
+    /* retira elemento do inicio */
+        l = p->prox;
+    else
+    /* retira elemento do meio da lista */
+        ant->prox = p->prox;
+
+        
+    free(p);
+
+    printf("==== nome removido com sucesso =====");
+
+
+    return l;
+}
+
+
 /*função para iserir a passagem dentro dos nos e assim criar a lista*/
 
 Lista* inserir_passagem(Lista* lista_passagem, Passagem * nome){
@@ -97,7 +135,7 @@ Lista * lst_busca(Lista* lista_passagem){
     
     
 	Lista * aux;
-    
+
 	for(aux=lista_passagem; aux!=NULL; aux=aux->prox){
 
 		if (strcmp(aux->info->nome, nome_buscado)==0){
