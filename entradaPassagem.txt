@@ -12,3 +12,8 @@ a	a	a	2
 a	a	a	3	
 s	s	s	3	
 d	d	d	3	
+a	a	a	2	
+Ytalo	porto alegre	pdf	1	
+thiago	pdf	santana	2	
+a1	a	a	1	
+a2	b	as	2	

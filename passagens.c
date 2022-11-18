@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "passagens.h"
 
-/* criar a struct passagem */
+
 
 struct passagem{
 
@@ -13,15 +13,14 @@ struct passagem{
 
 };
 
-/*função para criar a lista*/
+
 
 struct lista {
     Passagem* info;
     struct lista* prox;
 }; 
 
-/*função que pede ao usuario as infos
-da passagem*/
+
 
 Passagem* reserva_passagem(void){
     Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
@@ -41,27 +40,27 @@ Passagem* reserva_passagem(void){
     scanf(" %d", &passagem->numero_aviao);
     printf("\n");
 
-    FILE* arquivo = fopen("entradaPassagem.txt", "a"); //criando um arquivo
-    if(arquivo ==NULL){  //compararando para ver se o arquivo é nulo
-        printf("Erro ao abrir o arquivo: "); // caso arquivo seja nulo eexibe ao usuario erro
-        exit(1); //abortando o proganma
+    FILE* arquivo = fopen("entradaPassagem.txt", "a"); 
+    if(arquivo ==NULL){  
+        printf("Erro ao abrir o arquivo: "); 
+        exit(1); 
     }
 
     
-    fprintf(arquivo, "%s\t%s\t%s\t%d\t\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); //salvando os dados do usuario dentro do arquivo
+    fprintf(arquivo, "%s\t%s\t%s\t%d\t\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); 
 
-    fclose(arquivo); //fechando o arquivo
+    fclose(arquivo); 
 
-    return passagem; //retornando passagem
+    return passagem; 
 }
 
 
 Lista * lst_retira(Lista*l){
 
     char name[50];
-    Lista* ant = NULL; /* ponteiro para elemento anterior */
-    Lista* p = l; /* ponteiro para percorrer a lista*/
-    /* procura elemento na lista, guardando anterior */
+    Lista* ant = NULL; 
+    Lista* p = l; 
+    
 
     printf("\nDigite o nome do passageiro a ser removido: ");
     scanf("%[^\n]", name);
@@ -70,19 +69,18 @@ Lista * lst_retira(Lista*l){
     while(strcmp(p->info->nome, name)!=0){
         
     	if (p==NULL)
-        	return l; /* n�o achou: retorna lista original */
+        	return l; 
         ant = p;
         p = p->prox;
-            /* verifica se achou elemento */
-
+           
     }
-    /* retira elemento */
+   
     if (ant==NULL){
-    /* retira elemento do inicio */
+    
         l = p->prox;
     }    
     else{
-    /* retira elemento do meio da lista */
+    
         ant->prox = p->prox;
     }
         printf("==== nome removido com sucesso =====\n\n");
@@ -91,7 +89,7 @@ Lista * lst_retira(Lista*l){
     return l;
 }
 
-/*função para iserir a passagem dentro dos nos e assim criar a lista*/
+
 
 Lista* inserir_passagem(Lista* lista_passagem, Passagem * nome){
 
@@ -101,8 +99,7 @@ Lista* inserir_passagem(Lista* lista_passagem, Passagem * nome){
     return new_passagem;
 }
 
-/*função para o contador percorrer a todos os nos da lista e passar a info como pararametro para exibir
-a lista*/
+
 void lst_listar(Lista* lista_passagem){
     Lista*contador;
     for(contador=lista_passagem; contador!=NULL; contador=contador->prox){
@@ -116,7 +113,7 @@ void lst_listar(Lista* lista_passagem){
 }
 
 
-/* função para exibir os elementos da passagem */
+
 
 void exibe_passagem(Passagem* lista_passagem){ 
     printf("Nome: %s\nOrigem: %s\nDestino: %s\nNumero do aviao: %d\n\n", lista_passagem->nome, lista_passagem->origem, lista_passagem->destino, lista_passagem->numero_aviao);

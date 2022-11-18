@@ -31,12 +31,6 @@ void quant_vags(Lista *lista_passagem);
 /*
 Lista* lst_insere_ordenada(Lista * l);
 */
-/*
-Passagem* ler_arquivo(void);
-*/
 
-/*
-Lista* ler_arquivo(void);
-*/
 
 #endif
