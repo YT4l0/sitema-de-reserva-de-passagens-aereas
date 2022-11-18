@@ -218,8 +218,8 @@ void quantidade(Lista *lista_passagem){
         
     }
     printf("======== QUANTIDADE DE PASSAGEIROS ========\n");
-    printf("\n\texiste %d passageiros!\n\n", conta);
-    printf("==========================================\n\n");
+    printf("\n\t   existe %d passageiros!\n\n", conta);
+    printf("===========================================\n\n");
 }
 
 void quant_vags(Lista *lista_passagem){
@@ -231,8 +231,8 @@ void quant_vags(Lista *lista_passagem){
 
         
     }
-     printf("====== QUANTIDADE DE VAGAS ======\n");
-    printf("\n\t   existe %d vagas!\n\n", pass);
+    printf("========= QUANTIDADE DE VAGAS =========\n");
+    printf("\n\t  existe %d vagas!\n\n", pass);
     printf("=======================================\n\n");
 }
 
