@@ -137,7 +137,7 @@ Lista * lst_busca(Lista* lista_passagem){
 
 		if (strcmp(aux->info->nome, nome_buscado)==0){
 
-             printf("o nome buscado %s foi encontrado!\n\n", nome_buscado);
+             printf("O nome %s foi encontrado!\n\n", nome_buscado);
    
 
             
@@ -147,7 +147,7 @@ Lista * lst_busca(Lista* lista_passagem){
 
 	}
    
-    printf("o nome buscado nao foi encontrado!\n\n");
+    printf("O nome buscado nao foi encontrado!\n\n");
     printf("----------------\n");
     
 
