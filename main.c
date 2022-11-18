@@ -57,6 +57,7 @@ int LeOpcao(int menorValor, int maiorValor) {
             LimpaBuffer();
         }
     }
+    printf("\n");
     return op;
 }
 
@@ -170,7 +171,7 @@ int main(void) {
 
              Beep(1000,500);
                 saida = 1;
-                printf("Obrigado por usar este programa.");
+                printf("Obrigado por usar o sitsema de passagens aereas thyt.");
 
 
             break;
