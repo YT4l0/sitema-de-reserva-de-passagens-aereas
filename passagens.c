@@ -63,7 +63,7 @@ Lista * lst_retira(Lista*l){
     Lista* p = l; /* ponteiro para percorrer a lista*/
     /* procura elemento na lista, guardando anterior */
 
-    printf("\ndigite o nome do passageiro a ser removido: \n");
+    printf("\ndigite o nome do passageiro a ser removido: ");
     scanf("%[^\n]", name);
 
 
@@ -77,14 +77,15 @@ Lista * lst_retira(Lista*l){
 
     }
     /* retira elemento */
-    if (ant==NULL)
+    if (ant==NULL){
     /* retira elemento do inicio */
         l = p->prox;
-    else
+    }    
+    else{
     /* retira elemento do meio da lista */
         ant->prox = p->prox;
-
-        printf("\n==== nome removido com sucesso =====\n");
+    }
+        printf("==== nome removido com sucesso =====\n\n");
 
     free(p);
     return l;
@@ -126,7 +127,7 @@ Lista * lst_busca(Lista* lista_passagem){
   
     char nome_buscado[50];
   
-    printf("Nome que deseja buscar?\n");
+    printf("Nome que deseja buscar? ");
     scanf("%[^\n]", nome_buscado);
     
     
@@ -174,7 +175,7 @@ void ler_arquivo(void){
 }
 */
 
-
+/*
 Lista* ler_arquivo(void){
     char linha[100];
     FILE* arq;
@@ -195,7 +196,7 @@ Lista* ler_arquivo(void){
     }
     return linha;
 }
-
+*/
 
 
 
