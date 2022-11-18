@@ -154,7 +154,30 @@ Lista * lst_busca(Lista* lista_passagem){
 	return NULL;
 
 }
+/*
+Lista* lst_insere_ordenada(Lista * l){
+    char name_ordena[50];
+	Lista * novo;
+	Lista * ant = NULL;
+	Lista * p =l;
+	while(p!=NULL && p->info<name_ordena){
+		ant = p;
+		p = p->prox;
 
+	}
+	novo = (Lista*) malloc(sizeof(Lista));
+	novo->info = name_ordena;
+	if(ant ==NULL){
+		novo->prox = l;
+		l = novo;
+	}
+	else {
+		novo->prox = ant-> prox;
+		ant->prox = novo;
+	}
+	return l;
+}
+*/
 /*
 void ler_arquivo(void){
 

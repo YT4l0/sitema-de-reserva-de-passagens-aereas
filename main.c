@@ -98,6 +98,7 @@ int main(void) {
             case OPCAO1:
                 Beep(1000,500); /* Emite um beep */
                 Passagem*passagem = reserva_passagem();
+              //  lista_passagem = lst_insere_ordenada(lista_passagem);
                 lista_passagem = inserir_passagem(lista_passagem, passagem);
                 
                 break;
@@ -162,6 +163,7 @@ int main(void) {
                 printf("Este programa possui um bug.");
                 return 1;
         }
+        
     } while(!saida);
     return 0;
 }

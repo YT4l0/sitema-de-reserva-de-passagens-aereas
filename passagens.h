@@ -23,8 +23,9 @@ void lst_listar(Lista* lista_passagem);
 
 Lista * lst_busca(Lista* lista_passagem);
 
-
-
+/*
+Lista* lst_insere_ordenada(Lista * l);
+*/
 /*
 Passagem* ler_arquivo(void);
 */
