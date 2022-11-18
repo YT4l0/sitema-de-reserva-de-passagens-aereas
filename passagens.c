@@ -48,7 +48,7 @@ Passagem* reserva_passagem(void){
     }
 
     
-    fprintf(arquivo, "%s\n%s\n%s\n%d\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); //salvando os dados do usuario dentro do arquivo
+    fprintf(arquivo, "%s\t%s\t%s\t%d\t\n", passagem->nome, passagem->origem, passagem->destino, passagem->numero_aviao); //salvando os dados do usuario dentro do arquivo
 
     fclose(arquivo); //fechando o arquivo
 
@@ -154,12 +154,13 @@ Lista * lst_busca(Lista* lista_passagem){
 	return NULL;
 
 }
+
 /*
-Lista* lst_insere_ordenada(Lista * l){
+Lista* lst_insere_ordenada(Lista * lista_passagem){
     char name_ordena[50];
 	Lista * novo;
 	Lista * ant = NULL;
-	Lista * p =l;
+	Lista * p = lista_passagem;
 	while(p!=NULL && p->info<name_ordena){
 		ant = p;
 		p = p->prox;
@@ -175,51 +176,67 @@ Lista* lst_insere_ordenada(Lista * l){
 		novo->prox = ant-> prox;
 		ant->prox = novo;
 	}
-	return l;
+	return lista_passagem;
 }
-*/
-/*
-void ler_arquivo(void){
 
-    Passagem *lerArquivo;
-
-    FILE *arq = fopen("entradaPassagem.txt" , "r");
-    if(arq == NULL){
-        printf("Erro ao abrir o arquivo");
-        exit(1);
-    }
-
-    while(fscanf(arq, "%[^\n] %[^\n] %[^\n] %d ", lerArquivo->nome, lerArquivo->origem, lerArquivo->destino, lerArquivo->numero_aviao) != EOF){
-        printf("Nome: %[^\n]\n Origem: %[^\n] Destino: %[^\n]\n Numero do aviao: %d ", lerArquivo->nome, lerArquivo->origem, lerArquivo->destino, lerArquivo->numero_aviao);
-    }
-
-    fclose(arq);
-
-}
 */
 
-/*
-Lista* ler_arquivo(void){
+
+
+
+
+
+
+Lista* ler_arquivo(Lista *lista_passagem){
+
     char linha[100];
-    FILE* arq;
 
 
-    arq = fopen("entrada_lista1_ex2.txt", "rt");
-    if (arq == NULL) {
-        printf("Não encontrado\n");
-        exit(1);
+    FILE* arquivo = fopen("entradaPassagem.txt", "r"); //criando um arquivo
+    if(arquivo ==NULL){  //compararando para ver se o arquivo é nulo
+        printf("Erro ao abrir o arquivo: "); // caso arquivo seja nulo eexibe ao usuario erro
+
+        exit(1); //abortando o proganma
     }
 
  // Ler os dados do arquivo de entrada 
-    while (fgets(linha,100,arq) != NULL){
+    while (fgets(linha,100,arquivo) != NULL){
         // Passando os dados do vetor linha para o vetor v
-        sscanf(linha, "%d ", &v[n]);
+        sscanf(linha, arquivo, "%s\t%s\t%s\t%d\t\n", lista_passagem->info->nome, lista_passagem->info->origem, lista_passagem->info->destino, &lista_passagem->info->numero_aviao);
         
-        n++;
     }
-    return linha;
+    return lista_passagem;
 }
-*/
+
+void quantidade(Lista *lista_passagem){
+    Lista * i;
+    int conta = 0;
+    for (i = lista_passagem; i != NULL; i = i->prox) {
+        conta++;
+
+
+        
+    }
+    printf("existe %d passageiros!\n", conta);
+}
+
+void quant_vags(Lista *lista_passagem){
+    Lista * i;
+    int pass = 100;
+    for (i = lista_passagem; i != NULL; i = i->prox) {
+        pass--;
+
+
+        
+    }
+    printf("existe %d vagas!\n", pass);
+}
+
+
+
+
+
+
 
 
 

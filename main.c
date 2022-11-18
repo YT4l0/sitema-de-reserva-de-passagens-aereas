@@ -86,6 +86,11 @@ void ApresentaMenu(int nItens, int menorOpcao, ...) {
 int main(void) {
     unsigned char op;
     Lista* lista_passagem = NULL; //criar funcao para ler os dados do arquivo e preencher a lista {ler_arquivo(void)}
+
+     
+    
+
+
     
     unsigned int saida = 0;
 
@@ -97,9 +102,12 @@ int main(void) {
         switch(op) {
             case OPCAO1:
                 Beep(1000,500); /* Emite um beep */
+
                 Passagem*passagem = reserva_passagem();
               //  lista_passagem = lst_insere_ordenada(lista_passagem);
+                // lista_passagem = ler_arquivo(lista_passagem);
                 lista_passagem = inserir_passagem(lista_passagem, passagem);
+                
                 
                 break;
 
@@ -139,6 +147,8 @@ int main(void) {
             case OPCAO5:
                 Beep(1000,500);
 
+                quant_vags(lista_passagem);
+
                 //checking vagas opens
 
                 break;
@@ -146,6 +156,12 @@ int main(void) {
             Beep(1000,500);
 
             //cheking number of passageiros
+
+            quantidade(lista_passagem);
+
+            
+            
+            
 
             break;
 
