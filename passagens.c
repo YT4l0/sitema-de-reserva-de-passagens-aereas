@@ -25,7 +25,7 @@ da passagem*/
 
 Passagem* reserva_passagem(void){
     Passagem* passagem = (Passagem*)malloc(sizeof(Passagem));
-    printf("digite o nome:  ");
+    printf("Digite o nome:  ");
     scanf(" %[^\n]", passagem->nome);
     printf("\n");
 
@@ -37,7 +37,7 @@ Passagem* reserva_passagem(void){
     scanf(" %[^\n]", passagem->destino);
     printf("\n");
 
-    printf("digite o numero do aviao: ");
+    printf("Digite o numero do aviao: ");
     scanf(" %d", &passagem->numero_aviao);
     printf("\n");
 
@@ -63,7 +63,7 @@ Lista * lst_retira(Lista*l){
     Lista* p = l; /* ponteiro para percorrer a lista*/
     /* procura elemento na lista, guardando anterior */
 
-    printf("\ndigite o nome do passageiro a ser removido: ");
+    printf("\nDigite o nome do passageiro a ser removido: ");
     scanf("%[^\n]", name);
 
 
@@ -186,8 +186,10 @@ Lista* lst_insere_ordenada(Lista * lista_passagem){
 
 
 
-
+/*
 Lista* ler_arquivo(Lista *lista_passagem){
+
+    int n;
 
     char linha[100];
 
@@ -202,21 +204,21 @@ Lista* ler_arquivo(Lista *lista_passagem){
  // Ler os dados do arquivo de entrada 
     while (fgets(linha,100,arquivo) != NULL){
         // Passando os dados do vetor linha para o vetor v
-        sscanf(linha, arquivo, "%s\t%s\t%s\t%d\t\n", lista_passagem->info->nome, lista_passagem->info->origem, lista_passagem->info->destino, &lista_passagem->info->numero_aviao);
-        
+        sscanf( arquivo, "%s\t%s\t%s\t%d\t\n", lista_passagem->info->nome, lista_passagem->info->origem, lista_passagem->info->destino, &lista_passagem->info->numero_aviao);
+        n++;
     }
     return lista_passagem;
 }
+*/
 
 void quantidade(Lista *lista_passagem){
     Lista * i;
     int conta = 0;
+
     for (i = lista_passagem; i != NULL; i = i->prox) {
         conta++;
-
-
-        
     }
+
     printf("======== QUANTIDADE DE PASSAGEIROS ========\n");
     printf("\n\t   existe %d passageiros!\n\n", conta);
     printf("===========================================\n\n");
@@ -225,23 +227,12 @@ void quantidade(Lista *lista_passagem){
 void quant_vags(Lista *lista_passagem){
     Lista * i;
     int pass = 100;
+    
     for (i = lista_passagem; i != NULL; i = i->prox) {
-        pass--;
-
-
-        
+        pass--; 
     }
+
     printf("========= QUANTIDADE DE VAGAS =========\n");
     printf("\n\t  existe %d vagas!\n\n", pass);
     printf("=======================================\n\n");
 }
-
-
-
-
-
-
-
-
-
-

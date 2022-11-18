@@ -104,9 +104,11 @@ int main(void) {
             case OPCAO1:
                 Beep(1000,500); /* Emite um beep */
 
+                
+
                 Passagem*passagem = reserva_passagem();
               //  lista_passagem = lst_insere_ordenada(lista_passagem);
-                // lista_passagem = ler_arquivo(lista_passagem);
+                //lista_passagem = ler_arquivo(lista_passagem);
                 lista_passagem = inserir_passagem(lista_passagem, passagem);
                 
                 
